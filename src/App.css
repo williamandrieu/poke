@@ -15,6 +15,9 @@ p{
   flex-direction: column;
   justify-content: center;
   width: 50vw;
+  background-color: rgba(90,90,90,0.9);
+  border: 3px solid black;
+  text-align: center;
 }
 #logoAccueil{
   height: 30vh;
@@ -24,12 +27,16 @@ p{
 }
 #page{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: center;
   margin-top: 75px;
 }
-
+#topAcc{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+  font-size: 25px;
+}
 
 .TopBar {
   top: 0;
@@ -136,27 +143,3 @@ li {
 
 
 /*//////////////////////////////////////////////////////////////*/
-
-.MiniCard {
-  margin-top: 30px;
-  border: 4px solid black;
-  border-radius: 4px;
-  height: 300px;
-  background-color: rgba(90,90,90,0.9);
-
-}
-
-.CardId > img{
-  margin: 7px;
-  height: 200px;
-  border: 1px solid rgba(200,200,200,0.7);
-  border-radius: 4px;
-  display: flex;
-  flex-direction: column;
-}
-
-.CardName{
-  margin: 10px;
-  font-size: 30px;
-  color: white;
-}
