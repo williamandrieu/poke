@@ -1,20 +1,44 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import TopBar from './components/TopBar';
-import List from './components/List';
+import Accueil from './components/Accueil';
 import './App.css';
-import img from './img/background.png';
+import firebase from './firebase.js';
 
 class App extends Component {
+
+  constructor(props) {
+        super(props);
+        this.changePage = this.changePage.bind(this);
+        this.state = { name: '',page: 'Accueil'};
+
+    }
+
+    changePage(page){
+      this.setState({page: page});
+    }
+
+  componentDidMount() {
+    var name = '';
+    firebase.database().ref('/pokemon').once('value').then((snapshot) =>{
+      name = snapshot.val()[0].name;
+      this.setState({ name: name });
+      });
+  }
   render() {
-    return (
+    const {page} = this.state;
+    switch(page){
+      case "Accueil":
+      return (
       <div className="App">
         <TopBar/>
-        <center className="center">
-        <List/>
-        </center>
+        <Accueil/>
       </div>
     );
+      break;
+
+    }
+    
   }
 }
 
