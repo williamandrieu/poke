@@ -3,7 +3,11 @@ import React, { Component } from 'react';
 export default class TopBar extends Component {
 	constructor(props){
 		super(props)
-		this.state = {name :"DRESSEUR"};
+		this.state = {name :"DRESSEUR", inputVal:""};
+		this.changeInput = this.changeInput.bind(this);
+	}
+	changeInput(event){
+		this.setState({inputVal: event.target.value});
 	}
 	
   render() {
@@ -17,7 +21,7 @@ export default class TopBar extends Component {
 			      		</div>
 			      		
 				      	<div className="Inputbox">
-				      		<input  id="Search" type="text" placeholder="     Search..."  ></input>
+				      		<input  id="Search" type="text" placeholder="     Search..." value={this.state.inputVal} onChange={this.changeInput}></input>
 				     	</div>
 				     	<div className="box a">
 			      			<a>{this.state.name}</a>
