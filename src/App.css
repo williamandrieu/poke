@@ -5,6 +5,10 @@ body {
   background-attachment: fixed;
 }
 
+.center {
+    margin-top: 150px;
+}
+
 
 .TopBar {
   top: 0;
@@ -21,6 +25,18 @@ body {
 }
 .box {
   margin: 3px;
+  margin-right: 10px;
+  width: 23%;
+  align-self: center;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-shadow: inset 0px 0px 3px 0px rgba(0,0,0,0.37);
+}
+
+.Inputbox {
+  margin: 3px;
+  margin-right: 10px;
   width: 23%;
   align-self: center;
   text-align: center;
@@ -40,6 +56,12 @@ body {
 .a > a{
   text-decoration: none;
 }
+
+#Search {
+  width: 100%;
+}
+
+
 /*///////////////////////////////////////////////////////////////*/
 
 
@@ -47,8 +69,8 @@ body {
 .Card {
   margin-top: 30px;
   border: 3px solid black;
-  width: 500px;
-  height: 500px;
+  width: 680px;
+  height: 680px;
   background-color: rgba(90,90,90,0.9);
   box-shadow: inset 0px 0px 20px -2px rgba(0,0,0,0.37);
 }
@@ -71,7 +93,26 @@ body {
 li {
   text-align: left;
 }
+.listBox {
+  
+  display: flex;
+  flex-direction: row;
+  /*border: 3px solid red;*/
+  justify-content: space-around;
+  overflow: scroll;
+}
 
+.listItem {
+  overflow-y:scroll; 
+  position:relative;
+  height: 180px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  border-top: 1px solid grey;
+  border-right: 1px solid grey;
+  width: 50%;
+}
 
 
 /*//////////////////////////////////////////////////////////////*/

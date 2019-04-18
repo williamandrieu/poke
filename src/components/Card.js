@@ -21,14 +21,28 @@ export default class Card extends Component {
 			      <div>
 			      	<p>STATS :</p>
 			      </div>
+			      <div className="listBox">
+				      <div className="listItem">
+				      	<ul>
+				      		<li>coucou</li>
+				      		<li>coucou</li>
+				      		<li>coucou</li>
+				      	</ul>
+				      </div>
+				      <div className="listItem" >
+				      	<ul>
+				      		<li>coucou</li>
+				      		<li>coucou</li>
+				      		<li>coucou</li>
+				      		<li>coucou</li>
+				      		<li>coucou</li>
+				      	</ul>
+				      </div>
+			      </div>
 			      <div>
-			      	<ul>
-			      		<li>coucou</li>
-			      		<li>coucou</li>
-			      		<li>coucou</li>
-			      		<li>coucou</li>
-			      		<li>coucou</li>
-			      	</ul>
+			      	<p>
+			      		Blastoise (/ˈblæstɔɪs/), known in Japan as Kamex (カメックス Kamekkusu), is a Water–type Pokémon species in Nintendo and Game Freak's Pokémon franchise. Created by Ken Sugimori, it first appeared in the video games Pokémon Red and Blue and subsequent sequels, later appearing in various merchandise, spinoff titles, and animated and printed adaptations of the franchise. It is the final evolution of Squirtle and the evolved form of Wartortle. Its name is a portmanteau of the words "Blast" (referring to its water-cannons) and "Tortoise." Blastoise, along with the other starter Pokémon, was also in the first Pokémon movie.
+			      	</p>
 			      </div>
 		      </div>
     	);
