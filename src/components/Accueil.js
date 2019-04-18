@@ -9,7 +9,7 @@ export default class Accueil extends Component {
   render() {
 		return (
 		      <div id="Accueil">
-		      	<img src="./img/background.png"/>
+		      	<img id="logoAccueil"src={require("../img/Pokémon-Dex.png")}/>
 		      	<p>Bienvenue sur Pokémon-Dex !</p>
 		      	<div id="Description">
 		      		<p>Ici tu peu faire des choses, plein de chose avec les pokemon.</p>
