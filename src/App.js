@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import TopBar from './components/TopBar';
 import Accueil from './components/Accueil';
 import Card from './components/Card';
+import MiniCard from './components/MiniCard';
 import './App.css';
 import firebase from './firebase.js';
 
