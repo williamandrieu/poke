@@ -1,44 +1,35 @@
 import React, { Component } from 'react';
+import Card from './Card';
 
 export default class List extends Component {
 	constructor(props){
 		super(props)
-		this.state = {name :"VolanBizar"};
+		this.state = {name :"VolanBizar",pokemon1:[]};
+		this.pokeDescription = this.pokeDescription.bind(this);
 	}
 
-	function pokeDescription(argument) {
-		const rp = require('request-promise');
-		const $ = require('cheerio');
-		const pokeParse = 
+		 pokeDescription() {
+		const pokeParse = require('../name.json')
 		const url = 'https://en.wikipedia.org/wiki/';
 
-		rp(url)
-		.then(function(html) {
-   		//success!
-    	const wikiUrls = [];
-    	for (let i = 0; i < pokeParse.lenght; i++) {
-    	wikiUrls.push($('big > a', html)[i].attribs.href);
+		//console.log(pokeParse);
+		
+    	const pokemon = [];
+    	for (let i = 1; i < 202; i++) {
+    		pokemon.push(<Card name={pokeParse[i].name} src={require("../img/pokemon/"+(i+1)+".png")} />);
     	}
-    	return Promise.all(
-    	wikiUrls.map(function(url) {
-    		return potusParse('https://en.wikipedia.org' + url);
-    	})
-    	);
-		})
-		.then(function(presidents) {
-			console.log(presidents);
-		})
-		.catch(function(err) {
-   		//handle error
-    	console.log(err);
-		});
-	}
-	}
+    	this.setState({pokemon1:pokemon}) ;
+		}
 	
+	
+	componentDidMount() {
+		this.pokeDescription();
+	}
+
   render() {
 		return (
 		      <div className="List">
-			     
+			    {this.state.pokemon1} 
 		      </div>
     	);
   			

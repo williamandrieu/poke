@@ -103,8 +103,7 @@ li {
 }
 
 .listItem {
-  overflow-y:scroll;
-  position:relative;
+  overflow-y:scroll; 
   height: 180px;
   padding: 20px;
   display: flex;
