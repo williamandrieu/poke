@@ -13,9 +13,8 @@ export default class Card extends Component {
 			      <div className="CardTitle">
 <<<<<<< Updated upstream
 			      	<img src={require("../img/pokemon/"+pokedexId+".png")}/>
-=======
-			      	<img src={this.props.src}/>
->>>>>>> Stashed changes
+
+			      	
 			      	<div className="CardInfo">
 			      	<p>Nom : {name}</p>
 			      	<p>Pokedex Id : {pokedexId}</p>
