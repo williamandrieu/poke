@@ -12,7 +12,6 @@ body {
 
 .TopBar {
   top: 0;
-  position: fixed;
   width: 100%;
   background-color: rgba(200,200,200,0.97);
   display: flex;
@@ -124,4 +123,28 @@ li {
   border: 3px solid black;
   background-color: rgba(90,90,90,0.9);
   box-shadow: inset 0px 0px 20px -2px rgba(0,0,0,0.37);
+}
+
+/*//////////////////////////////////////////////////////////////*/
+
+.MiniCard {
+  margin-top: 30px;
+  border: 4px solid black;
+  border-radius: 4px;
+  width: 250px;
+  height: 300px;
+  background-color: rgba(90,90,90,0.9);
+}
+
+.CardId > img{
+  margin: 7px;
+  height: 200px;
+  border: 1px solid rgba(200,200,200,0.7);
+  border-radius: 4px;
+}
+
+.CardName{
+  margin: 5px;
+  font-size: 30px;
+  color: white;
 }
