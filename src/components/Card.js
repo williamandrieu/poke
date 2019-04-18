@@ -12,7 +12,7 @@ export default class Card extends Component {
 			      <div className="CardTitle">
 			      	<img src="https://www.pokepedia.fr/images/thumb/2/24/Tortank-RFVF.png/500px-Tortank-RFVF.png"/>
 			      	<div className="CardInfo">
-			      	<p>Nom : Tortank</p>
+			      	<p>Nom : {this.props.name}</p>
 			      	<p>Sexe : GROS CANON</p>
 			      	<p>Type : Charmeur</p>
 			      	<p>Classification : Turtle</p>
