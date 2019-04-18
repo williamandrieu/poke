@@ -7,13 +7,11 @@ export default class Card extends Component {
 	}
 	
   render() {
-  	const { pokedexId,name,type1,type2,sexe,classification,hp,speed,defense,attack,sp_attack,sp_defense } = this.props;
+  	const { pokedexId,name,type1,type2,sexe,classification,hp,speed,defense,attack,sp_attack,sp_defense,eggs} = this.props;
 		return (
 		      <div className="Card">
 			      <div className="CardTitle">
 			      	<img src={require("../img/pokemon/"+pokedexId+".png")}/>
-
-			      	
 			      	<div className="CardInfo">
 			      	<p>Nom : {name}</p>
 			      	<p>Pokedex Id : {pokedexId}</p>
@@ -39,11 +37,8 @@ export default class Card extends Component {
 				      </div>
 				      <div className="listItem" >
 				      	<ul>
-				      		<li>coucou</li>
-				      		<li>coucou</li>
-				      		<li>coucou</li>
-				      		<li>coucou</li>
-				      		<li>coucou</li>
+				      		<li>Nb step for eggs : {eggs}</li>
+				      		<li>Nb step for eggs : {eggs}</li>
 				      	</ul>
 				      </div>
 			      </div>

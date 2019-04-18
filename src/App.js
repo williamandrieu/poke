@@ -36,6 +36,7 @@ class App extends Component {
         <center>
         {
           this.state.bdd.map(function(item, i){
+            console.log(item);
             if(item.pokedex_number < 722){
               return <Card 
               name={item.name}
@@ -51,8 +52,8 @@ class App extends Component {
               sp_attack={item.sp_attack}
               sp_defense={item.sp_defense}
               attack={item.attack}
+              eggs={item.base_egg_steps}
               />
-              console.log(item.find());
             }
           })
         }
