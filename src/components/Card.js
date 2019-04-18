@@ -11,7 +11,6 @@ export default class Card extends Component {
 		return (
 		      <div className="Card">
 			      <div className="CardTitle">
-<<<<<<< Updated upstream
 			      	<img src={require("../img/pokemon/"+pokedexId+".png")}/>
 
 			      	
