@@ -16,6 +16,7 @@ class App extends Component {
     }
 
     changePage(page){
+      console.log("oui");
       this.setState({page: page});
     }
 
@@ -32,13 +33,25 @@ class App extends Component {
       case "Accueil":
       return (
       <div className="App">
-        <TopBar/>
-        <center>
+        <TopBar changePage={this.changePage}/>
+        <div id="page">
+        <Accueil/>
+         </div>
+      </div>
+    );
+      break;
+      case "All":
+      return (
+      <div className="App">
+        <TopBar changePage={this.changePage}/>
+        <div id="page">
         {
           this.state.bdd.map(function(item, i){
+            console.log(item);
             if(item.pokedex_number < 722){
               return <Card 
               name={item.name}
+              nameJP={item.japanese_name}
               pokedexId={item.pokedex_number} 
               type={item.type} 
               sexe={item.percentage_male} 
@@ -51,13 +64,14 @@ class App extends Component {
               sp_attack={item.sp_attack}
               sp_defense={item.sp_defense}
               attack={item.attack}
+              eggs={item.base_egg_steps}
+              generation={item.generation}
+              weight={item.weight_kg}
               />
-              console.log(item.find());
             }
           })
         }
-        </center>
-        <Accueil/>
+         </div>
       </div>
     );
       break;
