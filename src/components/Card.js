@@ -7,15 +7,18 @@ export default class Card extends Component {
 	}
 	
   render() {
+  	const { pokedexId,name,type1,type2,sexe,classification,hp,speed,defense,attack,sp_attack,sp_defense } = this.props;
 		return (
 		      <div className="Card">
 			      <div className="CardTitle">
-			      	<img src="https://www.pokepedia.fr/images/thumb/2/24/Tortank-RFVF.png/500px-Tortank-RFVF.png"/>
+			      	<img src={require("../img/pokemon/"+pokedexId+".png")}/>
 			      	<div className="CardInfo">
-			      	<p>Nom : {this.props.name}</p>
-			      	<p>Sexe : GROS CANON</p>
-			      	<p>Type : Charmeur</p>
-			      	<p>Classification : Turtle</p>
+			      	<p>Nom : {name}</p>
+			      	<p>Pokedex Id : {pokedexId}</p>
+			      	<p>Sexe : {sexe}</p>
+			      	<p>Type 1 : {type1}</p>
+			      	<p>Type 2 : {type2 == ""? "none": type2}</p>
+			      	<p>Classification : {classification}</p>
 			      	</div>
 			      </div>
 			      <div>
@@ -24,9 +27,12 @@ export default class Card extends Component {
 			      <div className="listBox">
 				      <div className="listItem">
 				      	<ul>
-				      		<li>coucou</li>
-				      		<li>coucou</li>
-				      		<li>coucou</li>
+				      		<li>Hp : {hp}</li>
+				      		<li>Defense : {defense} </li>
+				      		<li>Attack : {attack} </li>
+				      		<li>Speed : {speed}</li>
+				      		<li>Sp attack : {sp_attack} </li>
+				      		<li>Sp defense : {sp_defense}</li>
 				      	</ul>
 				      </div>
 				      <div className="listItem" >
