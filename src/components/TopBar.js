@@ -11,7 +11,6 @@ export default class TopBar extends Component {
 	}
 	
   render() {
-  	console.log(this);
 		return (
 		      <div className="Profile">
 			      <div className='TopBar'>
@@ -20,7 +19,7 @@ export default class TopBar extends Component {
 			      		</div>
 			      		
 				      	<div className="Inputbox">
-				      		<input  id="Search" type="text" placeholder="     Search..." value={this.state.inputVal} onChange={this.changeInput}></input>
+				      		<input id="Search" type="text" placeholder="     Search..." value={this.state.inputVal} onChange={this.changeInput}></input>
 				     	</div>
 				     	<div className="box a" onClick={() =>this.props.changePage("All")}>
 			      			<a>All</a>
@@ -29,7 +28,7 @@ export default class TopBar extends Component {
 			      			<a>Advanced search</a>
 			      		</div>
 				      	<div className="box a" onClick={() =>this.props.changePage("All")}>
-				      		<a >CATEGORIES</a>
+				      		<a>CATEGORIES</a>
 				      	</div>
 			      </div>
 		      </div>

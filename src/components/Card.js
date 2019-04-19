@@ -7,19 +7,21 @@ export default class Card extends Component {
 	}
 	
   render() {
-  	const { pokedexId,name,nameJP,type1,type2,sexe,classification,hp,speed,defense,attack,sp_attack,sp_defense,eggs,generation,weight} = this.props;
+  	const { pokemon} = this.props;
+  	console.log(pokemon);
 		return (
 		      <div className="Card">
 			      <div className="CardTitle">
-			      	<img src={require("../img/pokemon/"+pokedexId+".png")}/>
+			      <div onClick={() => this.props.changePage("All")}>Retour</div>
+			      	<img src={require("../img/pokemon/"+pokemon.pokedex_number+".png")}/>
 			      	<div className="CardInfo">
-			      	<p>Name EN : {name}</p>
-			      	<p>Name JP : {nameJP}</p>
-			      	<p>Pokedex Id : {pokedexId}</p>
-			      	<p>Sexe : {sexe}</p>
-			      	<p>Type 1 : {type1}</p>
-			      	<p>Type 2 : {type2 == ""? "none": type2}</p>
-			      	<p>Classification : {classification}</p>
+			      	<p>Name EN : {pokemon.name}</p>
+			      	<p>Name JP : {pokemon.japanese_name}</p>
+			      	<p>Pokedex Id : {pokemon.pokedex_number}</p>
+			      	<p>Sexe : {pokemon.percentage_male}</p>
+			      	<p>Type 1 : {pokemon.type1}</p>
+			      	<p>Type 2 : {pokemon.type2 == ""? "none": pokemon.type2}</p>
+			      	<p>Classification : {pokemon.classfication}</p>
 			      	</div>
 			      </div>
 			      <div>
@@ -28,19 +30,19 @@ export default class Card extends Component {
 			      <div className="listBox">
 				      <div className="listItem">
 				      	<ul>
-				      		<li>Hp : {hp}</li>
-				      		<li>Defense : {defense} </li>
-				      		<li>Attack : {attack} </li>
-				      		<li>Speed : {speed}</li>
-				      		<li>Sp attack : {sp_attack} </li>
-				      		<li>Sp defense : {sp_defense}</li>
+				      		<li>Hp : {pokemon.hp}</li>
+				      		<li>Defense : {pokemon.defense} </li>
+				      		<li>Attack : {pokemon.attack} </li>
+				      		<li>Speed : {pokemon.speed}</li>
+				      		<li>Sp attack : {pokemon.sp_attack} </li>
+				      		<li>Sp defense : {pokemon.sp_defense}</li>
 				      	</ul>
 				      </div>
 				      <div className="listItem" >
 				      	<ul>
-				      		<li>Nb step for eggs : {eggs}</li>
-				      		<li>Generation : {generation}</li>
-				      		<li>Weight : {weight+" kg"}</li>
+				      		<li>Nb step for eggs : {pokemon.base_egg_steps}</li>
+				      		<li>Generation : {pokemon.generation}</li>
+				      		<li>Weight : {pokemon.weight_kg+" kg"}</li>
 				      	</ul>
 				      </div>
 			      </div>

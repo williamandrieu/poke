@@ -5,15 +5,19 @@ export default class MiniCard extends Component {
 		super(props)
 	}
 
+	createCard(){
+		this.props.changePokemon(this.props.pokemon);
+		
+	}
 
 	render(){
-		const{pokedexId, name} = this.props;
+		const{pokemon} = this.props;
 		return(
-			<div className="MiniCard">
+			<div onClick={() => this.createCard()} className="MiniCard">
 				<div className="CardId">
-					<img src={require("../img/pokemon/"+pokedexId+".png")}/>
+					<img src={require("../img/pokemon/"+pokemon.pokedex_number+".png")}/>
 					<div className="CardName">
-					<p>{name}</p>
+					<p>{pokemon.name}</p>
 					</div>
 				</div> 
 			</div>		
