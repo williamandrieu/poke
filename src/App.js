@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import TopBar from './components/TopBar';
 import Accueil from './components/Accueil';
 import Card from './components/Card';
+import AdvancedSearch from './components/AdvancedSearch';
 import './App.css';
 import firebase from './firebase.js';
 
@@ -11,7 +12,7 @@ class App extends Component {
   constructor(props) {
         super(props);
         this.changePage = this.changePage.bind(this);
-        this.state = { name: '',page: 'Accueil', bdd: []};
+        this.state = { name: '',page: 'Advanced', bdd: []};
 
     }
 
@@ -59,6 +60,13 @@ class App extends Component {
         }
         </center>
         <Accueil/>
+      </div>
+    );
+      break;
+      case "Advanced":
+      return (
+      <div className="App">
+        <AdvancedSearch/>
       </div>
     );
       break;
